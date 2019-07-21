@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+    <ion-title>Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ContentRegistr" text-center>
+        <div class="RegistrImg" style="margin-top:1.2rem;">
+          <img style="padding: 0;" src="../../../assets/img/registerimage.png">
+        </div>
+
+        <h3 text-center class="titleReg">Welcome to Registration!</h3>
+
+        <ion-grid>
+           <ion-row>
+              <ion-col>
+                 <ion-item>
+                    <ion-input type="text" placeholder="Your Username"><ion-icon name="person" class="coloricon"></ion-icon></ion-input>
+                 </ion-item>
+              </ion-col>
+           </ion-row>
+              
+           <ion-row>
+               <ion-col>
+                  <ion-item>
+                     <ion-input type="email" placeholder="Your Email"><ion-icon name="mail" class="coloricon"></ion-icon></ion-input>
+                  </ion-item>
+               </ion-col>
+            </ion-row>   
+
+           <ion-row> 
+              <ion-col>
+                 <ion-item>
+                    <ion-label text-left>Choose a gender:</ion-label>
+                    <ion-select placeholder="Selected One">
+                        <ion-select-option>Female</ion-select-option>
+                        <ion-select-option>Male</ion-select-option>
+                    </ion-select>
+                 </ion-item>
+              </ion-col>
+            </ion-row>
+              
+          <ion-row>  
+              <ion-col>
+                  <ion-item>
+                     <ion-input type="password" placeholder="Create Password"><ion-icon name="lock" class="coloricon"></ion-icon></ion-input>
+                  </ion-item>
+               </ion-col>
+          </ion-row>     
+
+        <ion-row>
+               <ion-col>
+                  <ion-item>
+                     <ion-input type="password" placeholder="Repeat Password"><ion-icon name="lock" class="coloricon"></ion-icon></ion-input>
+                  </ion-item>
+               </ion-col>
+        </ion-row>
+
+        <ion-row>
+           <ion-col>
+              <ion-button color="success"  size="default" shape="round"><ion-icon name="hand" style="margin-right:3px"></ion-icon>Sign Up</ion-button>
+           </ion-col>
+        </ion-row>
+        </ion-grid>
+</ion-content>

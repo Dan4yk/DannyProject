@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="primary">
+		<ion-buttons slot="start">
+				<ion-menu-button></ion-menu-button>
+			  </ion-buttons>
+    <ion-title color="light">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="backgroundLogImg" text-center>
+<div class="logimg">
+	<img src="../../assets/img/login.png" alt="picture">
+	<h1 text-center class="logotext">Welcome to Explore!</h1>
+</div>
+	
+<form [formGroup]="loginForm" style="margin-top:3.2rem;">
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<ion-item text-center>
+					<ion-input formControlName="username" type="text" name="username" placeholder="Username or Email"><ion-icon name="contact" class="iconuser"></ion-icon></ion-input>
+				</ion-item>
+
+				<div class="error-messages">
+					<ng-container *ngFor="let error of error_messages.username">
+						<div class="error-messages" *ngIf="loginForm.get('username').hasError(error.type) && (loginForm.get('username').dirty || loginForm.get('username').touched)">
+							{{ error.message }}
+						</div>
+					</ng-container>
+				</div>
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col>
+				<ion-item text-center>
+					<ion-input formControlName="password" type="password" name="password" placeholder="Password"><ion-icon name="lock" class="iconuser"></ion-icon></ion-input>
+				</ion-item>
+
+				<div class="error-messages">
+					<ng-container *ngFor="let error of error_messages.password">
+						<div class="error-messages" *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+							{{ error.message }}
+						</div>
+					</ng-container>
+				</div>
+			</ion-col>
+		</ion-row>
+
+		<ion-row style="margin-top: 0.5rem;">
+			<ion-col>
+				<ion-button (click)='login()' [disabled]="!loginForm.valid" color="primary" expand="block"> <ion-icon name="log-in" style="margin-right:2px;"></ion-icon> Sign In</ion-button>
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col  text-left size="2">
+				<ion-button class="forgotpass" fill="clear">Forgot password</ion-button>
+			</ion-col>
+
+			<ion-col  text-right>
+				<ion-button class="register" fill="clear">Sign Up</ion-button>
+			</ion-col>
+		</ion-row>
+
+	</ion-grid>
+</form>		
+</ion-content>

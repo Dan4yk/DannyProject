@@ -16,9 +16,24 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Tickets',
+      url: '/activities',
+      icon: 'globe'
+    },
+    {
+      title: 'Settings',
+      url: '/setting' ,
+      icon: 'settings'
+    },
+    {
+      title: 'Sign In',
+      url: '/login',
+      icon: 'log-in'
+    },
+    {
+      title: 'Sign Up',
+      url: '/registration',
+      icon: 'browsers'
     }
   ];
 

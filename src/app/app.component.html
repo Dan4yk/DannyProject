@@ -2,8 +2,27 @@
   <ion-split-pane>
     <ion-menu type="overlay">
       <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
+        <ion-toolbar color="primary">
+          <ion-grid>
+              <ion-row>
+                  <ion-col>
+                      <div class="user-avatar">
+                         <img src="../assets/img/settingimg.png" alt="picture">
+                      </div>
+                   </ion-col>
+                   <ion-col>
+                      <h2 class="username">Danu Rosca</h2>
+                      <span>Status: Online</span>
+                   </ion-col>
+              </ion-row>
+
+              <ion-row text-right>
+                  <ion-col >
+                      <ion-button class="paddingbutton" size="small" color="danger">Edit Profile</ion-button>
+                      <ion-button  size="small" color="success">Logout</ion-button>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
         </ion-toolbar>
       </ion-header>
       <ion-content>
