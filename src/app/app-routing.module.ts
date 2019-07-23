@@ -15,7 +15,6 @@ const routes: Routes = [
   { path: 'registration', loadChildren: './registration/registration.module#RegistrationPageModule' },
   { path: 'activities', loadChildren: './activities/activities.module#ActivitiesPageModule' },
   { path: 'logout', loadChildren: './logout/logout.module#LogoutPageModule' },
-  { path: 'notification', loadChildren: './notification/notification.module#NotificationPageModule' },
   { path: 'setting', loadChildren: './setting/setting.module#SettingPageModule' },
   { path: 'editprofile', loadChildren: './editprofile/editprofile.module#EditprofilePageModule' }
 ];

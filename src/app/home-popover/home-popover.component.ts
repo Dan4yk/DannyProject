@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
+import { NotificationsService } from '../notifications/notifications.service';
 
 @Component({
   selector: 'app-home-popover',
@@ -8,11 +9,22 @@ import { PopoverController } from '@ionic/angular';
 })
 export class HomePopoverComponent implements OnInit {
 
-  constructor(private popoverControll: PopoverController) { }
+  notification: any = [];
+  constructor(
+    private popoverControll: PopoverController,
+    public notificationsService: NotificationsService
+  ) {
+      this.getCounters();
+  }
 
-  ngOnInit() {}
+  async getCounters() {
+    this.notification = await this.notificationsService.getData().toPromise();
+    console.log('COUNS', this.notification);
+  }
 
-  close(){
+  close() {
     this.popoverControll.dismiss();
   }
+
+  ngOnInit() {}
 }

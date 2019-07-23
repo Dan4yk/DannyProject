@@ -21,11 +21,6 @@ export class AppComponent {
       icon: 'globe'
     },
     {
-      title: 'Notifications',
-      url: '/notification',
-      icon: 'notifications'
-    },
-    {
       title: 'Settings',
       url: '/setting' ,
       icon: 'settings'
