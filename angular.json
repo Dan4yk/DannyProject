@@ -33,8 +33,9 @@
             ],
             "styles": [
               {
-                "input": "src/theme/variables.scss"
+                "input": "src/theme/danny-theme.scss"
               },
+
               {
                 "input": "src/global.scss"
               },

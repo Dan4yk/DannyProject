@@ -2,7 +2,16 @@
   <ion-toolbar color="primary">
       <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
-          </ion-buttons>
+      </ion-buttons>
+
+      <ion-button  class="btn" size="small" slot="end" (click)="presentPopover($event)">
+          <ion-icon name="notifications"></ion-icon> 
+      </ion-button>
+
+      <ion-button routerLink="/setting" class="btn"  size="small" slot="end">
+        <ion-icon name="cog"></ion-icon> 
+    </ion-button>
+
     <ion-title>
       Home
     </ion-title>
@@ -10,21 +19,21 @@
 </ion-header>
 
 <ion-content >
-   
-      
-    <ion-card style="margin-top: 3.5rem;">   
+   <h1 text-center class="text1">Welcome!</h1> 
+   <h2 text-center class="text2">Now you can choose the  place you want to visit</h2>  
+    <ion-card style="margin-top: 3.5rem;padding:auto;">   
         <ion-item tappable>
-            <ion-icon name="search" color="primary" style="margin-right: 10px; font-size: 20px;"></ion-icon>
-             <span></span>
+            <ion-icon name="search" color="primary" style="margin-right: 20px; font-size: 20px;"></ion-icon>
+            <ion-input type="text" placeholder="Country,City"></ion-input>
         </ion-item>
 
           <ion-item>
              <ion-icon name="calendar" color="primary" style="margin-right: 10px; font-size:20px;"></ion-icon>
-             <span></span>
-            </ion-item> 
+             <ion-datetime  displayFormat="DD/MM/YYYY" placeholder="Select date" ></ion-datetime>
+           </ion-item> 
     </ion-card>  
       
-   <ion-button expand="block"><ion-icon name="search" style="margin-right:3px;"></ion-icon> Search</ion-button>
+   <ion-button routerLink="/activities" expand="block" tappable><ion-icon name="search" style="margin-right:3px;"></ion-icon> Search</ion-button>
       
              
 </ion-content>

@@ -40,9 +40,9 @@ export class LoginPage implements OnInit {
       ])),
       username: new FormControl('', Validators.compose([
         Validators.required,
-        Validators.minLength(6),
+        Validators.minLength(4),
         Validators.maxLength(15),
-        Validators.pattern('^[a-zA-Z0-9_-]{6,15}$')
+        Validators.pattern('^[a-zA-Z0-9_-]{4,15}$')
       ]))
     });
   }

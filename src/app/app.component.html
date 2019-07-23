@@ -1,6 +1,6 @@
 <ion-app>
-  <ion-split-pane>
-    <ion-menu type="overlay">
+  <ion-split-pane main id="content">
+    <ion-menu  slot="start" type="overlay">
       <ion-header>
         <ion-toolbar color="primary">
           <ion-grid>
@@ -17,9 +17,9 @@
               </ion-row>
 
               <ion-row text-right>
-                  <ion-col >
-                      <ion-button class="paddingbutton" size="small" color="danger">Edit Profile</ion-button>
-                      <ion-button  size="small" color="success">Logout</ion-button>
+                  <ion-col>
+                      <ion-button routerLink="/editprofile" class="paddingbutton" size="small" color="danger">Edit Profile</ion-button>
+                      <ion-button routerLink="/login"  size="small" color="success">Logout</ion-button>
                   </ion-col>
               </ion-row>
           </ion-grid>
@@ -38,6 +38,6 @@
         </ion-list>
       </ion-content>
     </ion-menu>
-    <ion-router-outlet main></ion-router-outlet>
+    <ion-router-outlet main contentId="content"></ion-router-outlet>
   </ion-split-pane>
 </ion-app>

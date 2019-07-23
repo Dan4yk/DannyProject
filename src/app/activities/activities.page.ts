@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CountriesService } from '../countries.service';
 
 @Component({
   selector: 'app-activities',
@@ -6,8 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./activities.page.scss'],
 })
 export class ActivitiesPage implements OnInit {
+  countries: any = [];
+  constructor(
+    public countriesService: CountriesService
+  ) {
+      this.getCounters();
+  }
 
-  constructor() { }
+  async getCounters() {
+    this.countries = await this.countriesService.getData().toPromise();
+    console.log('COUNS', this.countries);
+  }
+
 
   ngOnInit() {
   }

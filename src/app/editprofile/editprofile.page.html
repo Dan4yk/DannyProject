@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+    <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h2 text-center style="margin-top:3rem;">Edit your profile</h2>
+    <ion-grid>
+      <ion-row>
+         <ion-col>
+             <ion-item>
+                <ion-label position="floating">Username</ion-label>
+                <ion-input type="text"></ion-input>
+             </ion-item>
+         </ion-col>
+      </ion-row>
+
+      <ion-row>
+          <ion-col>
+              <ion-item>
+                 <ion-label position="floating">Email</ion-label>
+                 <ion-input type="email"></ion-input>
+              </ion-item>
+          </ion-col>
+       </ion-row>
+
+       <ion-row>
+          <ion-col>
+              <ion-item>
+                 <ion-label position="floating">Number Phone</ion-label>
+                 <ion-input type="number"></ion-input>
+              </ion-item>
+          </ion-col>
+       </ion-row>
+
+       <ion-list-header text-left  style="font-weight:bold;font-size:15px;">Change password</ion-list-header>
+       <ion-row>
+          <ion-col>
+              <ion-item>
+                 <ion-label position="floating">Old password</ion-label>
+                 <ion-input type="password"></ion-input>
+              </ion-item>
+          </ion-col>
+       </ion-row>
+
+       <ion-row>
+          <ion-col>
+              <ion-item>
+                 <ion-label position="floating">New password</ion-label>
+                 <ion-input type="password"></ion-input>
+              </ion-item>
+          </ion-col>
+       </ion-row>
+
+       <ion-row>
+          <ion-col text-center>
+                 <ion-button routerLink="/home" color="success">Save Changes</ion-button>
+          </ion-col>
+       </ion-row>
+    </ion-grid>
+</ion-content>

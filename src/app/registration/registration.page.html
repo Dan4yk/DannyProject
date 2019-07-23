@@ -14,20 +14,35 @@
 
         <h3 text-center class="titleReg">Welcome to Registration!</h3>
 
+<form [formGroup]="loginForm">
         <ion-grid>
            <ion-row>
               <ion-col>
                  <ion-item>
-                    <ion-input type="text" placeholder="Your Username"><ion-icon name="person" class="coloricon"></ion-icon></ion-input>
+                    <ion-input formControlName="username" type="text" placeholder="Your Username"><ion-icon name="person" class="coloricon"></ion-icon></ion-input>
                  </ion-item>
+                 <div class="error-messages">
+                  <ng-container *ngFor="let error of error_messages.username">
+                     <div class="error-messages" *ngIf="loginForm.get('username').hasError(error.type) && (loginForm.get('username').dirty || loginForm.get('username').touched)">
+                        {{ error.message }}
+                     </div>
+                  </ng-container>
+               </div>
               </ion-col>
            </ion-row>
               
            <ion-row>
                <ion-col>
                   <ion-item>
-                     <ion-input type="email" placeholder="Your Email"><ion-icon name="mail" class="coloricon"></ion-icon></ion-input>
+                     <ion-input formControlName="email" type="email" placeholder="Your Email"><ion-icon name="mail" class="coloricon"></ion-icon></ion-input>
                   </ion-item>
+                  <div class="error-messages">
+                     <ng-container *ngFor="let error of error_messages.email">
+                        <div class="error-messages" *ngIf="loginForm.get('email').hasError(error.type) && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+                           {{ error.message }}
+                        </div>
+                     </ng-container>
+                  </div>
                </ion-col>
             </ion-row>   
 
@@ -46,23 +61,38 @@
           <ion-row>  
               <ion-col>
                   <ion-item>
-                     <ion-input type="password" placeholder="Create Password"><ion-icon name="lock" class="coloricon"></ion-icon></ion-input>
+                     <ion-input formControlName="password" type="password" placeholder="Create Password"><ion-icon name="lock" class="coloricon"></ion-icon></ion-input>
                   </ion-item>
+                  <div class="error-messages">
+                     <ng-container *ngFor="let error of error_messages.password">
+                        <div class="error-messages" *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                           {{ error.message }}
+                        </div>
+                     </ng-container>
+                  </div>
                </ion-col>
           </ion-row>     
 
         <ion-row>
                <ion-col>
                   <ion-item>
-                     <ion-input type="password" placeholder="Repeat Password"><ion-icon name="lock" class="coloricon"></ion-icon></ion-input>
+                     <ion-input formControlName="password1" type="password" placeholder="Repeat Password"><ion-icon name="lock" class="coloricon"></ion-icon></ion-input>
                   </ion-item>
+                  <div class="error-messages">
+                     <ng-container *ngFor="let error of error_messages.password1">
+                        <div class="error-messages" *ngIf="loginForm.get('password1').hasError(error.type) && (loginForm.get('password1').dirty || loginForm.get('password1').touched)">
+                           {{ error.message }}
+                        </div>
+                     </ng-container>
+                  </div>
                </ion-col>
         </ion-row>
 
         <ion-row>
            <ion-col>
-              <ion-button color="success"  size="default" shape="round"><ion-icon name="hand" style="margin-right:3px"></ion-icon>Sign Up</ion-button>
+              <ion-button routerLink="/login" color="success"  size="default" shape="round"><ion-icon name="hand" style="margin-right:3px"></ion-icon>Sign Up</ion-button>
            </ion-col>
         </ion-row>
         </ion-grid>
+      </form>
 </ion-content>

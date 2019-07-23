@@ -7,12 +7,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="backgroundLogImg" text-center>
+<ion-content color="primary" text-center>
 <div class="logimg">
-	<img src="../../assets/img/login.png" alt="picture">
-	<h1 text-center class="logotext">Welcome to Explore!</h1>
+	<img src="../../assets/img/logimg.png" alt="explore"/>
+	<h1 class="logotext1">Login</h1>
 </div>
-	
 <form [formGroup]="loginForm" style="margin-top:3.2rem;">
 	<ion-grid>
 		<ion-row>
@@ -49,7 +48,7 @@
 
 		<ion-row style="margin-top: 0.5rem;">
 			<ion-col>
-				<ion-button (click)='login()' [disabled]="!loginForm.valid" color="primary" expand="block"> <ion-icon name="log-in" style="margin-right:2px;"></ion-icon> Sign In</ion-button>
+				<ion-button class="lightbtn" routerLink="/home" (click)='login()'  color="light"> <ion-icon name="log-in" style="margin-right:2px;"></ion-icon> Sign In</ion-button>
 			</ion-col>
 		</ion-row>
 
@@ -59,7 +58,7 @@
 			</ion-col>
 
 			<ion-col  text-right>
-				<ion-button class="register" fill="clear">Sign Up</ion-button>
+				<ion-button routerLink="/registration" class="register" fill="clear">Sign Up</ion-button>
 			</ion-col>
 		</ion-row>
 
