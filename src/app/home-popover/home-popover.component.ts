@@ -8,23 +8,38 @@ import { NotificationsService } from '../notifications/notifications.service';
   styleUrls: ['./home-popover.component.scss'],
 })
 export class HomePopoverComponent implements OnInit {
-
   notification: any = [];
   constructor(
     private popoverControll: PopoverController,
     public notificationsService: NotificationsService
   ) {
-      this.getCounters();
+        this.getNotifications();
+        // this.createNotifications();
   }
 
-  async getCounters() {
-    this.notification = await this.notificationsService.getData().toPromise();
-    console.log('COUNS', this.notification);
+  async getNotifications() {
+    this.notification = await this.notificationsService.getNotifications().toPromise();
+    console.log('Couns', this.notification);
   }
+
+  // async createNotifications() {
+  //   this.notification = await this.notificationsService.createNotifications().toPromise();
+  //   console.log('Couns', this.notification);
+  // }
+
+  // async deleteNotification() {
+  //     this.notificationsService.deleteNotifications(notification.id).subscribe();
+  //     console.log('Couns', this.notification);
+  // }
+
+  // async getCounters() {
+    // this.notification = await this.notificationsService.getData().toPromise();
+    // console.log('COUNS', this.notification);
+  // }
 
   close() {
     this.popoverControll.dismiss();
   }
-
-  ngOnInit() {}
+  ngOnInit(): void {
+  }
 }
